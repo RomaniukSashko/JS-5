@@ -95,9 +95,9 @@ console.log(action);
 // Виконайте відповідну операцію та виведіть результат. 
 // У випадку ділення на нуль — виведіть попередження.
 
+const mathSymbol = prompt("Оберіть оперецію: додати, відняти, помножити, поділити, знайти частку від ділення або піднести до степеня").trim().toLowerCase();
 const first = Number(prompt("Введіть перше число:").trim());
 const second = Number(prompt("Введіть друге число:").trim());
-const mathSymbol = prompt("Оберіть оперецію: додати, відняти, помножити або поділити").trim().toLowerCase();
 
 if (mathSymbol === "додати") {
     alert(`Результат: ${first + second}`);
@@ -117,6 +117,12 @@ if (mathSymbol === "додати") {
         alert(`Результат: ${first / second}`);
         console.log(`Результат: ${first / second}`);
     }
+} else if (mathSymbol === "знайти частку від ділення"){
+    alert(`Результат: ${first % second}`);
+    console.log(`Результат: ${first % second}`);
+} else if (mathSymbol === "піднести до степеня") {
+    alert(`Результат: ${first ** second}`);
+    console.log(`Результат: ${first ** second}`);
 } else {
     alert("Операцію виконати неможливо")
     console.log("Операцію виконати неможливо");
